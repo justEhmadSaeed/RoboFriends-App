@@ -5,6 +5,7 @@ import Card from './Card';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import { robots } from './robots';
+
 ReactDOM.render(
     <div>
         {robots.map((robo, i) => <Card id={robots[i].id} name={robots[i].name} email={robots[i].email} />)}
