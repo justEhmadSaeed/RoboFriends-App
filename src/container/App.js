@@ -23,12 +23,11 @@ class App extends Component {
     this.setState({ searchField: event.target.value });
   };
   render() {
-    const filteredRobots = this.state.robots.filter((robot) => {
-      return robot.name
-        .toLowerCase()
-        .includes(this.state.searchField.toLowerCase());
+    const { robots, searchField } = this.state;
+    const filteredRobots = robots.filter((robot) => {
+      return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
-    if (this.state.robots.length === 0) {
+    if (!robots.length) {
       return <h1 className="tc">Loading...</h1>;
     }
     return (
