@@ -23,8 +23,8 @@ class App extends Component {
     this.setState({ searchField: event.target.value });
   };
   render() {
-    const filteredRobots = this.state.robots.filter((robots) => {
-      return robots.name
+    const filteredRobots = this.state.robots.filter((robot) => {
+      return robot.name
         .toLowerCase()
         .includes(this.state.searchField.toLowerCase());
     });
