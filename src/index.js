@@ -4,6 +4,10 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import "tachyons";
 import App from "./container/App";
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+const store = createStore(rootReducer);
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
