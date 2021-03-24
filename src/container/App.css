@@ -9,3 +9,6 @@ h1 {
   font-weight: 200;
   color: #0ccac4;
 }
+.search-box:focus{
+  outline: none;
+}
